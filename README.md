@@ -1,6 +1,11 @@
 # Change Detection Tree
 
-Basic tree
+- NgZone + ChangeDetection: https://stackblitz.com/github/Angular-RU/change-detection-tree
+- ChangeDetection (without NgZone): [in progress]
+
+![](https://habrastorage.org/webt/p-/zg/tq/p-zgtqwfsrof8smuhaddjr217hu.gif)
+
+#### Basic tree
 
 ```html
 <tree>
@@ -20,9 +25,9 @@ Basic tree
 </tree>
 ```
 
-<img align="center" src="https://habrastorage.org/webt/dl/a2/iu/dla2ius47ynsh4xwu4a3mmu8_rw.png"> <br>
+![](https://habrastorage.org/webt/dl/a2/iu/dla2ius47ynsh4xwu4a3mmu8_rw.png)
 
-Advanced tree
+#### Advanced tree
 
 ```html
 <tree>
@@ -87,4 +92,4 @@ Advanced tree
 
 ```
 
-<img align="center" src="https://habrastorage.org/webt/zg/om/oj/zgomoj29m-xofxwh6uegshsamzk.png">
+![](https://habrastorage.org/webt/zg/om/oj/zgomoj29m-xofxwh6uegshsamzk.png)
