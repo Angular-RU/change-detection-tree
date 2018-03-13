@@ -1,14 +1,19 @@
+<center>
+  countTree = {{countTree|json}}
+</center>
+
 <tree>
 
   <child></child>
-  <child></child>
+  <child>
+    <child>
+      <div><input-change [count]="countTree"></input-change></div>
+    </child>
+  </child>
 
   <child>
-    <child></child>
     <child>
-      <child></child>
-      <child></child>
-      <child></child>
+      <div><button-click [count]="countTree"></button-click></div>
     </child>
   </child>
 

@@ -1,5 +1,8 @@
 <li>
-  <div class="content">
+  <div class="content"
+       [ngStyle]="{'background-color':this.color}"
+       [attr.data-id]="componentId"
+       [attr.data-finished-time]="finishedTime">
     <br><ng-content select="div"></ng-content>
   </div>
   <ul #ref [class.empty]="ref.children.length === 0">

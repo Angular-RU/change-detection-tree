@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Injector} from '@angular/core';
+import {Lifecycle} from "../../utils/Lifecycle";
+import {TreeNode} from "../base.class";
 
+@Lifecycle()
 @Component({
   selector: 'child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  styleUrls: ['./child.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ChildComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class ChildComponent extends TreeNode {
+  constructor(context: Injector) {
+    super(context);
   }
-
 }

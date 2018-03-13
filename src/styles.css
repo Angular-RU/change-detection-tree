@@ -77,12 +77,13 @@
   border: 1px solid #ccc;
   padding: 5px 10px;
   text-decoration: none;
-  color: #666;
   font-family: arial, verdana, tahoma, serif;
   font-size: 11px;
   display: inline-block;
   border-radius: 5px;
   transition: all 0.5s;
+  color: #fff;
+  font-weight: bold;
 }
 
 .tree ul.empty::before {
@@ -103,5 +104,5 @@ body::after {
 
 .tree li div.content::before {
   counter-increment: section;
-  content: counter(section, upper-alpha);
+  content: attr(data-id) " " attr(data-finished-time) "";
 }
