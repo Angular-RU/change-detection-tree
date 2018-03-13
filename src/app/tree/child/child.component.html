@@ -1,0 +1,9 @@
+<li>
+  <div class="content">
+    <br><ng-content select="div"></ng-content>
+  </div>
+  <ul #ref [class.empty]="ref.children.length === 0">
+    <ng-content></ng-content>
+  </ul>
+</li>
+
