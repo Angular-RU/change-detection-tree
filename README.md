@@ -1,9 +1,9 @@
 # Change Detection Tree
 
-- NgZone + ChangeDetection: 
+- NgZone + ChangeDetection: <br>
 https://stackblitz.com/github/Angular-RU/change-detection-tree
 
-- ChangeDetection + Async pipe (without NgZone): 
+- ChangeDetection + Async pipe (without NgZone): <br>
 https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/without-zone
 
 
