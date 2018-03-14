@@ -10,7 +10,7 @@ https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/without-zone
 
 ![](https://lh6.googleusercontent.com/1cvhUMAYNPpVsF6OqN5CBr0qeWVXRdCM5_fp4co4Pr2VDPCUqYlkhKPMMqPbv4QkqAwG5FMGHxSYr-nWA4ZZRQICOD-q5XE9bEVKyNn8mopiS4TM8Ak-A5jTX0xU6h9Snl6r7zNjR-E)
 
-- NgZone + ChangeDetection.OnPush (random generate tree)
+- NgZone + ChangeDetection.OnPush (random generate tree): <br>
 https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/generate-random-tree
 
 ![](https://habrastorage.org/webt/kb/ke/99/kbke999qbcmzik5pbjcp4pp3jfo.gif)
