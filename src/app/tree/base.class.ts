@@ -32,7 +32,7 @@ export abstract class TreeNode {
 
     if (method === "ngAfterViewChecked") {
       console.groupEnd();
-      this.finishedTime = timeRendering;
+      // TODO: bug, this.finishedTime = timeRendering;
       this.isOpen = false;
     }
 
