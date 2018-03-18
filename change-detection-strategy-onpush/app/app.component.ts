@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, ElementRef, Injector, ViewChild} from '@angular/core';
-import {Lifecycle} from '../../change-detection-strategy-default/common/utils/Lifecycle';
-import {TreeNode} from '../../change-detection-strategy-default/common/tree-node.class';
+import {Lifecycle} from '../common/utils/Lifecycle';
+import {TreeNode} from '../common/tree-node.class';
 
 @Component({
   selector: 'app-root',

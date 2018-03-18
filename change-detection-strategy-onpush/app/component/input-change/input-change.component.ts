@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Injector, Input} from '@angular/core';
-import {TreeNode} from '../../..//common/tree-node.class';
+import {TreeNode} from '../../../common/tree-node.class';
 
 @Component({
   selector: 'input-change',
