@@ -1,4 +1,4 @@
-import {Component, Injector} from '@angular/core';
+import {Component, ElementRef, Injector, ViewChild} from '@angular/core';
 import {Lifecycle} from './utils/Lifecycle';
 import {TreeNode} from './tree/base.class';
 
@@ -9,9 +9,21 @@ import {TreeNode} from './tree/base.class';
 })
 @Lifecycle({defaultName: true})
 export class AppComponent extends TreeNode {
-  countTree = {value: 0};
+
+  @ViewChild('tick', {read: ElementRef}) private tick: ElementRef;
+  public countTree = {value: 0};
+  private countTick: number = 0;
 
   constructor(context: Injector) {
     super(context);
   }
+
+  public ngAfterViewChecked() {
+    this.countTick++;
+    super.ngAfterViewChecked();
+    if (this.tick) {
+      this.tick.nativeElement.setAttribute('data-tick-count', this.countTick);
+    }
+  }
+
 }
