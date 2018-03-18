@@ -12,9 +12,8 @@ $ ng serve # worked with jit or aot
 
 StackBlitz: 
 
-- NgZone + ChangeDetection.Default (static tree + projection): <br>
-code sample: https://stackblitz.com/github/Angular-RU/change-detection-tree <br>
-online view: 
+- **NgZone + ChangeDetection.Default (static tree + projection)**: <br>
+Example: https://stackblitz.com/github/Angular-RU/change-detection-tree <br>
 
 ![](https://habrastorage.org/webt/dl/w4/u-/dlw4u-sfjgf1i2e7b-dpwlefx_k.gif)
 
@@ -22,8 +21,8 @@ online view:
 $ ng serve --app 0 --port 4200
 ```
 
-- NgZone + ChangeDetection.OnPush (random generate tree): <br>
-https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
+- **NgZone + ChangeDetection.OnPush (random generate tree)**: <br>
+Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
 
 ![](https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif)
 
