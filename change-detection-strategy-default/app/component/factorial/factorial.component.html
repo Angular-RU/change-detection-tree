@@ -1,0 +1,13 @@
+<div class="factorial">
+  <label>
+    Usage factorial (execute):
+    <input type="checkbox" [(ngModel)]="enabled">
+  </label>
+
+  <div *ngIf="enabled">
+    <input type="number" [(ngModel)]="factorialValue" min="0"><br>
+    {{factorialValue}}! = {{factorial(factorialValue)}} <br>
+    <div #total class="computed"></div>
+  </div>
+
+</div>

@@ -1,105 +1,66 @@
 # Change Detection Tree
 
+> This project shows you how the component tree in Angular is updated. 
+> The time shown on the component nodes in the tree is the interval 
+> between ngDoCheck and ngAfterViewChecked.
+
 - NgZone + ChangeDetection.Default: <br>
 https://stackblitz.com/github/Angular-RU/change-detection-tree
 
-![](https://habrastorage.org/webt/ic/3q/xw/ic3qxwhcqi52ismnykxnoi1rhoq.gif)
+![](https://habrastorage.org/webt/hv/bn/0x/hvbn0xup1hxmsgqp3zf1clryil0.gif)
 
-- ChangeDetection.OnPush + Async pipe (without NgZone): <br>
-https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/without-zone
+#### Detect problem with Zone
 
-![](https://lh6.googleusercontent.com/1cvhUMAYNPpVsF6OqN5CBr0qeWVXRdCM5_fp4co4Pr2VDPCUqYlkhKPMMqPbv4QkqAwG5FMGHxSYr-nWA4ZZRQICOD-q5XE9bEVKyNn8mopiS4TM8Ak-A5jTX0xU6h9Snl6r7zNjR-E)
+> Copy the code and paste it into the console. 
+> If your component tree too often calls Application.tick () your application will disappear.
 
-- NgZone + ChangeDetection.OnPush (random generate tree): <br>
-https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/generate-random-tree
+```typescript
+let [root] = getAllAngularRootElements();
+let appRoot = ng.probe(root);
+let [rootComponent] = appRoot.injector.get(ng.coreTokens.ApplicationRef).components;
+let ChangeDetectorRef = rootComponent.changeDetectorRef.constructor.prototype;
+ChangeDetectorRef.constructor.prototype.detectChanges = (function () {
+    let oldDC = ChangeDetectorRef.constructor.prototype.detectChanges;
+    let map = new WeakMap();
+    return function () {
+        Zone.root.run(() => showChangeDetection(this));
+        return oldDC.apply(this, arguments);
+    };
 
-![](https://habrastorage.org/webt/kb/ke/99/kbke999qbcmzik5pbjcp4pp3jfo.gif)
+    function showChangeDetection (changeDetector) {
+        let view = changeDetector._view;
+        modifyNodeOpacity(view, fade);
+        modifyNodeOpacity(view, (node) => {
+            let timeout = map.get(node.renderElement);
+            if (timeout) {
+                clearTimeout(timeout);
+            }
+            timeout = setTimeout(() => show(node), 1000);
+            map.set(node.renderElement, timeout);
+        });
+    };
 
-#### Basic tree
+    function modifyNodeOpacity (view, modifier) {
+        view.nodes.forEach(node => {
+            if (node && node.renderElement && node.renderElement.style) {
+                modifier(node);
+            }
+        });
+    }
 
-```html
-<tree>
+    function fade (node) {
+        let { style } = node.renderElement;
+        let opacity = parseFloat(style.opacity) || 1;
+        let newOpacity = opacity - 0.01;
+ 		    style.display = 'block';
+        style.opacity = newOpacity > 0 ? newOpacity : 0;
+    }
 
-  <child></child>
-  <child></child>
-
-  <child>
-    <child></child>
-    <child>
-      <child></child>
-      <child></child>
-      <child></child>
-    </child>
-  </child>
-
-</tree>
+    function show (node) {
+        let { style } = node.renderElement;
+		    style.display = 'block';
+        style.opacity = 1;
+    }
+})();
 ```
 
-![](https://habrastorage.org/webt/dl/a2/iu/dla2ius47ynsh4xwu4a3mmu8_rw.png)
-
-#### Advanced tree
-
-```html
-<tree>
-
-  <div>Root Component</div>
-
-  <child>
-    <div class="form-group">
-      <label>First Name</label>
-      <input type="text"
-             class="form-control">
-    </div>
-  </child>
-
-  <child>
-    <div class="form-group">
-      <label>Last Name</label>
-      <input type="text"
-             class="form-control">
-    </div>
-  </child>
-
-  <child>
-
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email"
-             class="form-control">
-    </div>
-
-    <child>
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password"
-               class="form-control">
-      </div>
-    </child>
-
-    <child>
-
-      <div class="form-group">
-        <label>Language</label>
-        <select class="form-control">
-          <option value="">Please select a language</option>
-        </select>
-      </div>
-
-      <child></child>
-      <child></child>
-
-      <child>
-        <div class="form-group">
-          <label>Send message</label>
-          <button>Send</button>
-        </div>
-      </child>
-
-    </child>
-  </child>
-
-</tree>
-
-```
-
-![](https://habrastorage.org/webt/zg/om/oj/zgomoj29m-xofxwh6uegshsamzk.png)

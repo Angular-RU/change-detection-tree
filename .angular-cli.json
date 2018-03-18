@@ -5,7 +5,7 @@
   },
   "apps": [
     {
-      "root": "src",
+      "root": "change-detection-strategy-default",
       "outDir": "dist",
       "assets": [
         "assets",
