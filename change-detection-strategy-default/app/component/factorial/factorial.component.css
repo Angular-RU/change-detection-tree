@@ -1,0 +1,20 @@
+.factorial {
+  max-width: 190px;
+  padding: 5px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.computed:after {
+  content: "Computed in template: " attr(data-total) "ms";
+  display: block;
+  font-size: 10px;
+  text-align: center;
+}
+
+.execute:after {
+  content: "Execute count in template: " attr(data-execute);
+  display: block;
+  font-size: 10px;
+  text-align: center;
+}
