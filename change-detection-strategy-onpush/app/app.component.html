@@ -1,0 +1,17 @@
+<div #tick class="tick">
+  NgZone + ChangeDetection.OnPush (random generate tree) <br>
+  Open the console, if you want to see the lifecycle
+</div>
+
+<tree>
+  <div>
+    <div class="center">
+      count = {{ countTree|json }}
+    </div>
+  </div>
+
+  <child
+    [limit]="{ deep: 3 }"
+    [count]="countTree">
+  </child>
+</tree>

@@ -4,27 +4,42 @@
 > The time shown on the component nodes in the tree is the interval 
 > between ngDoCheck and ngAfterViewChecked.
 
-```typescript
+```bash
 $ git clone https://github.com/Angular-RU/change-detection-tree cd-tree && cd cd-tree
 $ npm install # install all dependencies
-$ ng serve # worked jit or aot
+$ ng serve # worked with jit or aot
 ```
 
 StackBlitz: 
 
-- NgZone + ChangeDetection.Default: <br>
-https://stackblitz.com/github/Angular-RU/change-detection-tree
+- NgZone + ChangeDetection.Default (static tree + projection): <br>
+code sample: https://stackblitz.com/github/Angular-RU/change-detection-tree <br>
+online view: 
 
 ![](https://habrastorage.org/webt/dl/w4/u-/dlw4u-sfjgf1i2e7b-dpwlefx_k.gif)
 
-```typescript
-$ ng serve --app 0
+```bash
+$ ng serve --app 0 --port 4200
+```
+
+- NgZone + ChangeDetection.OnPush (random generate tree): <br>
+https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
+
+![](https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif)
+
+- NgZone + ChangeDetection.OnPush (random generate tree): <br>
+https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
+
+![](https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif)
+
+```bash
+$ ng serve --app 1 --port 4201
 ```
 
 #### Detect problem with Zone
 
 > Copy the code and paste it into the console. 
-> If your component tree too often calls Application.tick () your application will disappear.
+> If your component tree too often calls Application.tick() your application will disappear.
 
 ```typescript
 let [root] = getAllAngularRootElements();

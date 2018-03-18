@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .tick:after {
   content: "Application.tick() count: " attr(data-tick-count);
   display: block;

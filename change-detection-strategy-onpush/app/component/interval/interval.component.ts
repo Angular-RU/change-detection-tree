@@ -1,15 +1,16 @@
-import {Component, Injector, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Injector, Input} from '@angular/core';
 import {interval} from 'rxjs/observable/interval';
 import {map} from 'rxjs/operators';
 import {Subscription} from 'rxjs/Subscription';
 import {Observable} from 'rxjs/Observable';
-import {TreeNode} from '../../../common/tree-node.class';
-import {Lifecycle} from '../../../common/utils/Lifecycle';
+import {TreeNode} from '../../..//common/tree-node.class';
+import {Lifecycle} from '../../..//common/utils/Lifecycle';
 
 @Component({
   selector: 'interval',
   templateUrl: './interval.component.html',
-  styleUrls: ['./interval.component.css']
+  styleUrls: ['./interval.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 @Lifecycle({defaultName: true})
 export class IntervalComponent extends TreeNode {
