@@ -7,7 +7,7 @@
 - NgZone + ChangeDetection.Default: <br>
 https://stackblitz.com/github/Angular-RU/change-detection-tree
 
-![](https://habrastorage.org/webt/hv/bn/0x/hvbn0xup1hxmsgqp3zf1clryil0.gif)
+![](https://habrastorage.org/webt/dl/w4/u-/dlw4u-sfjgf1i2e7b-dpwlefx_k.gif)
 
 #### Detect problem with Zone
 
