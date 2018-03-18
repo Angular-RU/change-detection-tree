@@ -1,6 +1,6 @@
 import {Component, Injector} from '@angular/core';
-import {Lifecycle} from "../../utils/Lifecycle";
-import {TreeNode} from "../base.class";
+import {Lifecycle} from "../../../../common/utils/Lifecycle";
+import {TreeNode} from "../../../../common/tree-node.class";
 
 @Lifecycle()
 @Component({

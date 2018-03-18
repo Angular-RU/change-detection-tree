@@ -1,7 +1,7 @@
-import {Color} from '../utils/Color';
-import {Alphabet} from '../utils/Aplhabet';
+import {Color} from './utils/Color';
+import {Alphabet} from './utils/Aplhabet';
 import {ChangeDetectorRef, ElementRef, Injector, NgZone, OnChanges, Renderer2, SimpleChanges, ViewChild} from '@angular/core';
-import {NgLifecycle} from '../utils/NgLyfecycle';
+import {NgLifecycle} from './utils/NgLyfecycle';
 
 interface TreeTimers {
   start: number;

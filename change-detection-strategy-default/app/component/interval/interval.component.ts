@@ -3,8 +3,8 @@ import {interval} from 'rxjs/observable/interval';
 import {map} from 'rxjs/operators';
 import {Subscription} from 'rxjs/Subscription';
 import {Observable} from 'rxjs/Observable';
-import {TreeNode} from '../../tree/base.class';
-import {Lifecycle} from '../../utils/Lifecycle';
+import {TreeNode} from '../../../../common/tree-node.class';
+import {Lifecycle} from '../../../../common/utils/Lifecycle';
 
 @Component({
   selector: 'interval',
