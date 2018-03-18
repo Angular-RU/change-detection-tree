@@ -4,10 +4,22 @@
 > The time shown on the component nodes in the tree is the interval 
 > between ngDoCheck and ngAfterViewChecked.
 
+```typescript
+$ git clone https://github.com/Angular-RU/change-detection-tree cd-tree && cd cd-tree
+$ npm install # install all dependencies
+$ ng serve # worked jit or aot
+```
+
+StackBlitz: 
+
 - NgZone + ChangeDetection.Default: <br>
 https://stackblitz.com/github/Angular-RU/change-detection-tree
 
 ![](https://habrastorage.org/webt/dl/w4/u-/dlw4u-sfjgf1i2e7b-dpwlefx_k.gif)
+
+```typescript
+$ ng serve --app 0
+```
 
 #### Detect problem with Zone
 
@@ -22,10 +34,11 @@ let ChangeDetectorRef = rootComponent.changeDetectorRef.constructor.prototype;
 ChangeDetectorRef.constructor.prototype.detectChanges = (function () {
     let oldDC = ChangeDetectorRef.constructor.prototype.detectChanges;
     let map = new WeakMap();
+    
     return function () {
         Zone.root.run(() => showChangeDetection(this));
         return oldDC.apply(this, arguments);
-    };
+    }
 
     function showChangeDetection (changeDetector) {
         let view = changeDetector._view;
@@ -38,7 +51,7 @@ ChangeDetectorRef.constructor.prototype.detectChanges = (function () {
             timeout = setTimeout(() => show(node), 1000);
             map.set(node.renderElement, timeout);
         });
-    };
+    }
 
     function modifyNodeOpacity (view, modifier) {
         view.nodes.forEach(node => {
@@ -52,13 +65,13 @@ ChangeDetectorRef.constructor.prototype.detectChanges = (function () {
         let { style } = node.renderElement;
         let opacity = parseFloat(style.opacity) || 1;
         let newOpacity = opacity - 0.01;
- 		    style.display = 'block';
+        style.display = 'block';
         style.opacity = newOpacity > 0 ? newOpacity : 0;
     }
 
     function show (node) {
         let { style } = node.renderElement;
-		    style.display = 'block';
+        style.display = 'block';
         style.opacity = 1;
     }
 })();
