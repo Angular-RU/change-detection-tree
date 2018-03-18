@@ -27,11 +27,6 @@ https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
 
 ![](https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif)
 
-- NgZone + ChangeDetection.OnPush (random generate tree): <br>
-https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
-
-![](https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif)
-
 ```bash
 $ ng serve --app 1 --port 4201
 ```
