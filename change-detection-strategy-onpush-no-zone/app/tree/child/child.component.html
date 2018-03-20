@@ -1,0 +1,37 @@
+<li>
+  <div class="content"
+       [ngStyle]="{'background-color':this.color}"
+       [attr.data-id]="componentId"
+       #contentNode>
+    <br>
+    <ng-content select="div"></ng-content>
+  </div>
+  <ul #ref [class.empty]="ref.children.length === 0">
+    <ng-content></ng-content>
+
+    <ng-container *ngIf="savedItems || (limit.deep > 0 && countList.length)">
+      <child *ngFor="let element of countList; let i = index" [limit]="limit" [count$]="count$">
+        <div *ngIf="evaluateComponent.input && limitCount.input >= (i+1)">
+          <input-change [count$]="count$"></input-change>
+        </div>
+        <div *ngIf="evaluateComponent.button && limitCount.button >= (i+1)">
+          <button-click [count$]="count$"></button-click>
+        </div>
+        <div *ngIf="evaluateComponent.runOutside">
+          <interval runOutside="runOutside"></interval>
+        </div>
+        <div *ngIf="evaluateComponent.setInterval">
+          <interval setInterval="setInterval"></interval>
+        </div>
+        <div *ngIf="evaluateComponent.asyncPipe">
+          <interval asyncPipe="asyncPipe"></interval>
+        </div>
+        <div *ngIf="evaluateComponent.factorial">
+          <factorial></factorial>
+        </div>
+      </child>
+    </ng-container>
+
+  </ul>
+</li>
+

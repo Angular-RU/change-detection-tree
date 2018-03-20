@@ -1,0 +1,17 @@
+<div #tick class="tick">
+  ChangeDetection.OnPush + Async pipe - without ngZone (random generate tree) <br>
+  Open the console, if you want to see the lifecycle
+</div>
+
+<tree>
+  <div>
+    <div class="center">
+      count = {{ countTree$|async|json }}
+    </div>
+  </div>
+
+  <child
+    [limit]="{ deep: 6 }"
+    [count$]="countTree$">
+  </child>
+</tree>

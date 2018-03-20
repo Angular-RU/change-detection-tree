@@ -1,0 +1,132 @@
+.tree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+  display: flex;
+}
+
+.tree li,
+.tree child {
+  list-style-type: none;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.tree child {
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+}
+
+.tree child::before,
+.tree child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+
+.tree child::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.tree child:only-child::after,
+.tree child:only-child::before {
+  display: none;
+}
+
+.tree child:only-child {
+  padding-top: 0;
+}
+
+.tree child:first-child::before,
+.tree child:last-child::after {
+  border: 0 none;
+}
+
+.tree child:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+}
+
+.tree child:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree li div.content {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-family: arial, verdana, tahoma, serif;
+  font-size: 11px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s;
+  color: #fff;
+  font-weight: bold;
+}
+
+.tree ul.empty::before {
+  content: none;
+}
+
+body {
+  counter-reset: section;
+}
+
+.tree li div.content::before {
+  font-size: 12px;
+  counter-increment: section;
+  content: attr(data-id) " " attr(data-finished-time);
+}
+
+
+div.content {
+  transition: all 2s ease-in-out;
+  will-change: transform;
+}
+
+div.center {
+  text-align: center;
+}
+
+
+child label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+  margin-bottom: 5px;
+}
+
+child label input {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: 2px;
+  left: 5px;
+  overflow: hidden;
+}
