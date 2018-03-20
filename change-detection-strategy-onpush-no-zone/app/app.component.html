@@ -6,12 +6,12 @@
 <tree>
   <div>
     <div class="center">
-      count = {{ countTree$|async|json }}
+      count$ = {{ countTree$|async|json }}
     </div>
   </div>
 
   <child
-    [limit]="{ deep: 6 }"
+    [limit]="{ deep: 5, limitComponents: { input: 1, button: 1} }"
     [count$]="countTree$">
   </child>
 </tree>

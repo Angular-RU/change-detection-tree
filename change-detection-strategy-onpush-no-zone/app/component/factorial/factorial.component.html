@@ -1,7 +1,7 @@
 <div class="factorial">
   <p>FactorialComponent: </p>
-  <input type="number" [(ngModel)]="factorialValue" min="0"><br>
-  {{factorialValue}}! = {{factorial(factorialValue)}} <br><br>
+  <input type="number" [ngModel]="factorialValue" (ngModelChange)="updateValue($event)" min="0"><br>
+  {{factorialValue}}! = {{factorialValueResult||factorial(factorialValue)}} <br><br>
   <div #total class="computed"></div>
   <div #execute class="execute"></div>
 </div>

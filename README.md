@@ -30,6 +30,35 @@ Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onp
 $ ng serve --app 1 --port 4201
 ```
 
+- **ChangeDetection.OnPush + Async pipe - without ngZone (random generate tree)**: <br>
+Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush-async-without-zone
+
+![](https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif)
+
+```bash
+$ ng serve --app 2 --port 4202
+```
+
+- **ChangeDetection.Default + Async pipe + ngZone (random generate tree)**: <br>
+Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/async-pipe
+
+
+```bash
+$ ng serve --app 3 --port 4203
+```
+
+- **Custom state-management (services)**: <br>
+Example: In progress
+
+- **NgRx**: <br>
+Example: In progress
+
+- **MobX**: <br>
+Example: In progress
+
+- **Web-worker platform**: <br>
+Example: In progress
+
 #### Detect problem with Zone
 
 > Copy the code and paste it into the console. 

@@ -61,6 +61,7 @@ export class IntervalComponent extends TreeNode {
   private timerInterval() {
     this.timer = window.setInterval(() => {
       this.formatDate = this.getFormattedDate();
+      this.cd.detectChanges();
     }, 1000);
   }
 
