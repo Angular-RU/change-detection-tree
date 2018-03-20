@@ -1,0 +1,7 @@
+<label>
+  {{ runOutside || setInterval || asyncPipe }} interval
+  <input type="checkbox" [ngModel]="enabled" (ngModelChange)="updateInterval($event)">
+</label>
+
+<div *ngIf="asyncPipe">{{ (timerObservable | async) || formatDate }}</div>
+<div *ngIf="!asyncPipe">{{ formatDate }}</div>

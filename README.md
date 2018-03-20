@@ -54,7 +54,7 @@ $ ng serve --app 2 --port 4202
 <details>
 <summary>Learn more</summary>
 <div><br>
-<img src="">
+<img src="https://habrastorage.org/webt/p5/ac/hg/p5achg7jybtcquownvjxohcs5ck.gif" />
 <pre>
 $ ng serve --app 3 --port 4203
 </pre>

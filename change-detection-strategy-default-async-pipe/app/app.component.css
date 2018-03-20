@@ -1,0 +1,11 @@
+.tick {
+  text-align: center;
+}
+
+
+.tick:after {
+  content: "Application.tick() count: " attr(data-tick-count);
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
