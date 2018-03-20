@@ -12,8 +12,8 @@ $ ng serve # worked with jit or aot
 
 StackBlitz: 
 
-- **NgZone + ChangeDetection.Default (static tree + projection)**: <br>
-Example: https://stackblitz.com/github/Angular-RU/change-detection-tree <br>
+✅ **NgZone + ChangeDetection.Default (static tree + projection)**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: https://stackblitz.com/github/Angular-RU/change-detection-tree <br>
 
 <details>
 <summary>Learn more</summary>
@@ -24,8 +24,8 @@ $ ng serve --app 0 --port 4200
 </pre>
 </details><br>
 
-- **NgZone + ChangeDetection.OnPush (random generate tree)**: <br>
-Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
+✅ **NgZone + ChangeDetection.OnPush (random generate tree)**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
 
 <details>
 <summary>Learn more</summary>
@@ -36,8 +36,8 @@ $ ng serve --app 1 --port 4201
 </pre>  
 </details><br>
 
-- **ChangeDetection.OnPush + Async pipe - without ngZone (random generate tree)**: <br>
-Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush-async-without-zone
+✅ **ChangeDetection.OnPush + Async pipe - without ngZone (random generate tree)**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush-async-without-zone
 
 <details>
 <summary>Learn more</summary>
@@ -48,8 +48,8 @@ $ ng serve --app 2 --port 4202
 </pre>
 </details><br>
 
-- **ChangeDetection.Default + Async pipe + ngZone (random generate tree)**: <br>
-Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/async-pipe
+✅ **ChangeDetection.Default + Async pipe + ngZone (random generate tree)**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/async-pipe
 
 <details>
 <summary>Learn more</summary>
@@ -60,17 +60,17 @@ $ ng serve --app 3 --port 4203
 </pre>
 </details><br>
 
-- **Custom state-management (services)**: <br>
-Example: In progress
+❌ **Custom state-management (services)**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: In progress
 
-- **NgRx**: <br>
-Example: In progress
+❌ **NgRx**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: In progress
 
-- **MobX**: <br>
-Example: In progress
+❌ **MobX**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: In progress
 
-- **Web-worker platform**: <br>
-Example: In progress
+❌ **Web-worker platform**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: In progress
 
 #### Detect problem with Zone
 
