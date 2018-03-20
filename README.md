@@ -1,4 +1,4 @@
-# Change Detection Tree
+# Visual detecting changes in the component tree
 
 > This project shows you how the component tree in Angular is updated. 
 > The time shown on the component nodes in the tree is the interval 
