@@ -16,45 +16,49 @@ StackBlitz:
 Example: https://stackblitz.com/github/Angular-RU/change-detection-tree <br>
 
 <details>
+<summary>Learn more</summary>
 <div><br>
-  <img src="https://habrastorage.org/webt/dl/w4/u-/dlw4u-sfjgf1i2e7b-dpwlefx_k.gif">
-</details>
-
-```bash
+<img src="https://habrastorage.org/webt/dl/w4/u-/dlw4u-sfjgf1i2e7b-dpwlefx_k.gif">
+<pre>
 $ ng serve --app 0 --port 4200
-```
+</pre>
+</details><br>
 
 - **NgZone + ChangeDetection.OnPush (random generate tree)**: <br>
 Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush
 
 <details>
+<summary>Learn more</summary>
 <div><br>
-  <img src="https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif">
-</details>
-
-```bash
+<img src="https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif">
+<pre>
 $ ng serve --app 1 --port 4201
-```
+</pre>  
+</details><br>
 
 - **ChangeDetection.OnPush + Async pipe - without ngZone (random generate tree)**: <br>
 Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/onpush-async-without-zone
 
 <details>
+<summary>Learn more</summary>
 <div><br>
-  <img src="https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif">
-</details>
-
-```bash
+<img src="https://habrastorage.org/webt/jq/0t/_l/jq0t_ltli9iyvjtuvumct6awfmk.gif">
+<pre>
 $ ng serve --app 2 --port 4202
-```
+</pre>
+</details><br>
 
 - **ChangeDetection.Default + Async pipe + ngZone (random generate tree)**: <br>
 Example: https://stackblitz.com/github/Angular-RU/change-detection-tree/tree/async-pipe
 
-
-```bash
+<details>
+<summary>Learn more</summary>
+<div><br>
+<img src="">
+<pre>
 $ ng serve --app 3 --port 4203
-```
+</pre>
+</details><br>
 
 - **Custom state-management (services)**: <br>
 Example: In progress
