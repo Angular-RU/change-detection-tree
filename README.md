@@ -1,4 +1,4 @@
-# Visual detecting changes in the component tree
+## Visual detecting changes in the component tree
 
 > This project shows you how the component tree in Angular is updated. 
 > The time shown on the component nodes in the tree is the interval 
@@ -10,7 +10,7 @@ $ npm install # install all dependencies
 $ ng serve # worked with jit or aot
 ```
 
-StackBlitz: 
+### StackBlitz examples 
 
 ✅ **ChangeDetection.Default + NgZone (static tree + projection)**: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: https://stackblitz.com/github/Angular-RU/change-detection-tree <br>
@@ -60,6 +60,11 @@ $ ng serve --app 3 --port 4203
 </pre>
 </details><br>
 
+### TODO
+
+❌ **ChangeDetection.Default + Async pipe + Reactive Forms - without ngZone**: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: In progress
+
 ❌ **Custom state-management (services)**: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: In progress
 
@@ -72,7 +77,9 @@ $ ng serve --app 3 --port 4203
 ❌ **Web-worker platform**: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: In progress
 
-#### Detect problem with Zone
+### Checklist for detect problem
+
+- Detect problem with Zone
 
 > Copy the code and paste it into the console. 
 > If your component tree too often calls Application.tick() your application will disappear.
